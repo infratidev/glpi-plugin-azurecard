@@ -11,6 +11,15 @@ $Ticket = new Ticket();
 $Ticket->getFromDB($_POST['id']);
 $name = Html::Clean($Ticket->fields['name']);
 $idTicket = Html::Clean($Ticket->fields['id']);
+$name = str_replace('"', "", $name);
+$name = str_replace("'", "", $name);
+$name =  str_replace("/", "-", $name);
+$description = Html::Clean($Ticket->fields['content']);
+$description = str_replace("/", "-", $description);
+$description = str_replace('"', "",  $description);
+$description = str_replace("'", "",  $description);
+
+
 
 
 $content = Html::Clean($Ticket->fields['content']);
@@ -35,4 +44,8 @@ else{
 
 $url = explode("?", $_SERVER['HTTP_REFERER']);
 Html::redirect($url[0] . "?id=" . $_POST['id']);
+
+
+
+
 
