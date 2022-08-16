@@ -15,6 +15,7 @@ $description = Html::Clean($Ticket->fields['content']);
 $description = str_replace("/", "-", $description);
 $description = str_replace('"', "",  $description);
 $description = str_replace("'", "",  $description);
+$description = preg_replace('<(\s*)img[^<>]*>','-',$description);
 
 $AreaPath = "X\\\GLPi";
 $URLGLPI = "http://glpi.local/front/ticket.form.php?id=".$idTicket ;
