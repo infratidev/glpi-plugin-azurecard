@@ -1,5 +1,5 @@
 <?php
-define('PLUGIN_AZURECARD_VERSION', '0.1.0');
+define('PLUGIN_AZURECARD_VERSION', '0.4.0');
 
 class PluginAzureCardConfig extends CommonDBTM {
 
@@ -74,9 +74,9 @@ function plugin_version_azurecard(){
 
   return array('name'     => __('AzureCard','azurecard'),
           'version'   => PLUGIN_AZURECARD_VERSION ,
-          'author'         => '<a href="mailto:infrati@infrati.dev">Andrei </b> </a>',
+          'author'         => '<a href="https://github.com/infratidev/glpi-plugin-azurecard">Andrei Antonelli</b></a>',
           'license'     => 'GPLv2+',
-          'minGlpiVersion'  => '9.3'
+          'minGlpiVersion'  => '9.3',
           );
 }
 
