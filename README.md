@@ -6,14 +6,28 @@
   - [azurecard](azurecard/README.md)
 
 #### Plugin para gerar um backlog na Azure DevOps a partir de um ticket no GLPI.
-Leva as informações do título e descrição do ticket no GLPI.
 
+#### Workitem do tipo feature
+
+Registra as seguintes informações do GLPI para o workitem:
+- Título
+- Descrição do ticket
+- Data de abertura
+- Link do ticket GLPI
+- Requerentes
+- Atribuídos
+q
 #### Requisitos:
 Criar uma área específica no azure ```X\GLPi``` onde X é o nome do projeto.
-Criar um campo customizado no azure ```LinkGLPI``` para registro da URL com ID do Ticket original do GLPI
+Criar os seguintes campos customizados no workitem:
+- ```LinkGLPI``` para registro da URL com ID do Ticket original do GLPI
+- ```Data de Abertura``` para registro da data 
+- ```Requerentes GLPI``` para registro dos requerentes
+- ```Atribuídos GLPI``` para registro dos atribuidos
+
 
 #### Observação:
-O campo descrição, criará um link para o ticket original no GLPI
+No campo descrição do workitem, será gerado um link para o ticket no GLPI.
 
 <br>
 
